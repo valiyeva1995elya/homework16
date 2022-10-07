@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .case {
+      display: flex;
+      justify-content: center;
+    }
+
+    .block {
+      width: 800px;
+      height: 300px;
+      border: 4px solid grey;
+      border-radius: 30px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-sizing: border-box;
+
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      background-color: grey;
+    }
+
+    button {
+      width: 200px;
+      height: 300px;
+      font-size: 50px;
+      border-radius: 30px;
+      border: 4px solid transparent;
+      box-shadow: 10px 10px 10px grey;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="case">
+    <div class="block">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <button onclick="fn()">NEXT</button>
+  </div>
+
+  <script>
+    let a = document.querySelectorAll(".circle")
+
+    let i = -1;
+
+    function fn() {
+      i++
+
+      if (i === 0) {
+        a[i].style.background = "red"
+        a[i + 1].style.background = "grey"
+        a[i + 2].style.background = "grey"
+
+      } else if (i === 1) {
+        a[i].style.background = "yellow"
+        a[i - 1].style.background = "grey"
+        a[i + 1].style.background = "grey"
+      } else if (i === 2) {
+        a[i].style.background = "green"
+        a[i - 1].style.background = "grey"
+        a[i - 2].style.background = "grey"
+      }
+      if (i >= 2) {
+        i = -1
+      }
+    }
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

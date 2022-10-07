@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ol {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <ol>
+    <li onclick="fn('0')">"JavaScript for Kids: A Plauful Introduction to Programming" by Nick Morgan</li>
+    <li onclick="fn('1')">"Eloquent JavaScript: a Modern Introduction to Programming" by Marijn Haverbeke</li>
+    <li onclick="fn('2')">"JavaScript: The Good Parts" bt Douglas Crockford</li>
+    <li onclick="fn('3')">"Programming JavaScript Applications: Robust Web Architecture with Node. HTML5 and Moderns JS
+      Libraries" by Eric Elliott</li>
+    <li onclick="fn('4')">"Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript" by David Herman
+    </li>
+    <li onclick="fn('5')">"JavaScript: The Definitive Guide" by David Flanagan</li>
+    <li onclick="fn('6')">"You Don't Know JS" by Kyle Simpson</li>
+  </ol>
+
+
+  <script>
+    let a = document.querySelectorAll("li")
+
+    let c = 0
+    function fn(i) {
+      if (a[c].style.background == "orange") {
+        a[c].style.background = "transparent"
+      }
+      a[i].style.background = "orange"
+      c = i
+    }
+
+  </script>
+</body>
+
+</html>
